@@ -29,7 +29,7 @@
 # 📖 To-do-list <a name="about-project"></a>
 
 
-**To-do-list** To-do-list is a simple to do tasks list application.
+**To-do-list** is a simple to do tasks list application.
 
 ## 🛠 Built With <a name="built-with"></a>
 
