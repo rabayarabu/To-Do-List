@@ -4,7 +4,7 @@ class TodoList {
   }
 
   workList() {
-    const worklist = document.querySelector('to-do-list');
+    const worklist = document.querySelector('.to-do-list');
     const deleteBtn = document.getElementById('delete');
     const works = JSON.parse(localStorage.getItem('todolist')) || [];
 
@@ -18,7 +18,7 @@ class TodoList {
   }
 
   createWork() {
-    const Works = JSON.parse(localStorage.getItem('works')) || [];
+    const Works = JSON.parse(localStorage.getItem('todolist')) || [];
     const index = Works.length + 1;
     Works.push({
       index,
@@ -26,10 +26,9 @@ class TodoList {
       completed: false,
 
     });
-    localStorage.setItem('works', JSON.stringify(Works));
+    localStorage.setItem('todolist', JSON.stringify(Works));
     this.description.value = '';
     this.workList();
-    alert('Added');
   }
 }
 

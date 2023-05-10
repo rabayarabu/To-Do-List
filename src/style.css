@@ -32,7 +32,7 @@ body {
   justify-content: space-between;
 }
 
-input {
+input[type="text"] {
   padding: 10px;
   border: 1px;
   font-style: italic;
@@ -51,4 +51,12 @@ form {
   display: block;
   cursor: pointer;
   width: 100%;
+}
+
+.each-todo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px;
 }
