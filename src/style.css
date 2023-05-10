@@ -57,6 +57,12 @@ form {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 20px;
   padding: 10px;
+  position: relative;
+}
+
+.fa-trash {
+  position: absolute;
+  right: 10px;
 }

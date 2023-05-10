@@ -19,17 +19,20 @@ class TodoList {
 
   createWork() {
     const Works = JSON.parse(localStorage.getItem('todolist')) || [];
-    const index = Works.length + 1;
-    Works.push({
-      index,
-      description: this.description.value,
-      completed: false,
+    if (this.description.value === '') {
+      alert('please fill up the field');
+    } else {
+      const index = Works.length + 1;
+      Works.push({
+        index,
+        description: this.description.value,
+        completed: false,
 
-    });
-    localStorage.setItem('todolist', JSON.stringify(Works));
-    this.description.value = '';
-    this.workList();
+      });
+      localStorage.setItem('todolist', JSON.stringify(Works));
+      this.description.value = '';
+      this.workList();
+    }
   }
 }
-
 export default TodoList;
