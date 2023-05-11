@@ -18,7 +18,7 @@ const editedTodos = (description, id) => {
 };
 
 const editTodo = () => {
-  const selected = document.querySelectorAll('.text');
+  const selected = document.querySelectorAll('.text-todo');
   for (let i = 0; i < selected.length; i += 1) {
     selected[i].addEventListener('click', (e) => {
       const { id } = e.target;
