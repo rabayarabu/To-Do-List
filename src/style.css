@@ -25,6 +25,11 @@ body {
   justify-content: space-between;
 }
 
+.linethrough {
+  text-decoration: line-through;
+  color: red;
+}
+
 .do-s {
   width: 100%;
   display: flex;

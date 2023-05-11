@@ -12,7 +12,12 @@ class TodoList {
 
     if (works.length > 0) {
       this.id = 0;
-      worklist.innerHTML = works.map((work) => `<li class="each-todo"><input type="checkbox"> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`).join('');
+      worklist.innerHTML = works.map((work) => {
+        if (work.completed === true) {
+          return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index}> <p class="text-todo linethrough" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
+        }
+        return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index}> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
+      }).join('');
       deleteBtn.style.display = 'block';
     } else {
       worklist.innerHTML = 'its empty';
