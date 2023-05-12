@@ -1,4 +1,4 @@
-import TodoList from './workClass';
+import TodoList from './workClass.js';
 
 const clearcompletedtodos = () => {
   const clearbtn = document.getElementById('delete');

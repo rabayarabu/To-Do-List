@@ -1,3 +1,5 @@
+import interactivelist from './interactivelist.js';
+
 class TodoList {
   constructor(description) {
     this.description = description;
@@ -22,6 +24,7 @@ class TodoList {
     } else {
       worklist.innerHTML = 'its empty';
     }
+    interactivelist();
   }
 
   createWork() {

@@ -9,9 +9,9 @@ import { clearcompletedtodos, refreshpage } from '../modules/clearcompletedtodos
 
 const todoclass = new TodoList();
 todoclass.workList();
+refreshpage();
 addTodo();
 deleteTodos();
 editTodo();
 interactivelist();
 clearcompletedtodos();
-refreshpage();
