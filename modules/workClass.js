@@ -16,9 +16,9 @@ class TodoList {
       this.id = 0;
       worklist.innerHTML = works.map((work) => {
         if (work.completed === true) {
-          return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index}> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
+          return `<li class="each-todo"><input type="checkbox" checked class="check_box" id=${work.index} required> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
         }
-        return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index}> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
+        return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index} required> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
       }).join('');
       deleteBtn.style.display = 'block';
     } else {
@@ -31,7 +31,8 @@ class TodoList {
   createWork() {
     const Works = JSON.parse(localStorage.getItem('todolist')) || [];
     if (this.description.value === '') {
-      alert('please fill up the field');
+      const errormsg = document.createElement('div');
+      errormsg.innerHTML = '<p>Please fill up the field</p>';
     } else {
       const index = Works.length + 1;
       Works.push({
