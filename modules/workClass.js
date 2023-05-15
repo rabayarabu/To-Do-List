@@ -58,8 +58,7 @@ class TodoList {
   editedTodos(description, id) {
     const Todos = JSON.parse(localStorage.getItem('todolist')) || [];
     if (description === '') {
-      const worklist = document.querySelector('.to-do-list');
-      worklist.innerHTML = 'Please refresh the page';
+      this.workList();
     } else {
       const edit = Todos.find((todo) => todo.index.toString() === id);
       if (edit !== undefined) {
