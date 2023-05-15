@@ -1,5 +1,5 @@
 const interactivelist = () => {
-  const allmarked = document.querySelectorAll('.check_box');
+  const allmarked = document.querySelectorAll('input[type=checkbox]');
   allmarked.forEach((list) => {
     list.addEventListener('change', (e) => {
       const { id } = e.target;
@@ -8,8 +8,9 @@ const interactivelist = () => {
       if (matched !== undefined) {
         matched.completed = !matched.completed;
         matched.index = id;
+        e.target.classList.toggle('checked');
+        localStorage.setItem('todolist', JSON.stringify(todos));
       }
-      localStorage.setItem('todolist', JSON.stringify(todos));
     });
   });
 };

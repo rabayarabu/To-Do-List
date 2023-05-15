@@ -16,9 +16,9 @@ class TodoList {
       this.id = 0;
       worklist.innerHTML = works.map((work) => {
         if (work.completed === true) {
-          return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index}> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
+          return `<li class="each-todo"><input type="checkbox" checked class="check_box" id=${work.index} required> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
         }
-        return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index}> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
+        return `<li class="each-todo"><input type="checkbox" class="check_box" id=${work.index} required> <p class="text-todo" id=${work.index}>${work.description}</p><i class="fa-solid fa-trash" id=${work.index}></i></li>`;
       }).join('');
       deleteBtn.style.display = 'block';
     } else {
@@ -31,7 +31,8 @@ class TodoList {
   createWork() {
     const Works = JSON.parse(localStorage.getItem('todolist')) || [];
     if (this.description.value === '') {
-      alert('please fill up the field');
+      const worklist = document.querySelector('.to-do-list');
+      worklist.innerHTML = 'Please fill up the field';
     } else {
       const index = Works.length + 1;
       Works.push({
@@ -57,7 +58,8 @@ class TodoList {
   editedTodos(description, id) {
     const Todos = JSON.parse(localStorage.getItem('todolist')) || [];
     if (description === '') {
-      alert('please try something else');
+      const worklist = document.querySelector('.to-do-list');
+      worklist.innerHTML = 'Please refresh the page';
     } else {
       const edit = Todos.find((todo) => todo.index.toString() === id);
       if (edit !== undefined) {
