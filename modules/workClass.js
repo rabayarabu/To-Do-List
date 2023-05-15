@@ -31,8 +31,8 @@ class TodoList {
   createWork() {
     const Works = JSON.parse(localStorage.getItem('todolist')) || [];
     if (this.description.value === '') {
-      const errormsg = document.createElement('div');
-      errormsg.innerHTML = '<p>Please fill up the field</p>';
+      const worklist = document.querySelector('.to-do-list');
+      worklist.innerHTML = 'Please fill up the field';
     } else {
       const index = Works.length + 1;
       Works.push({
@@ -58,7 +58,8 @@ class TodoList {
   editedTodos(description, id) {
     const Todos = JSON.parse(localStorage.getItem('todolist')) || [];
     if (description === '') {
-      alert('please try something else');
+      const worklist = document.querySelector('.to-do-list');
+      worklist.innerHTML = 'Please refresh the page';
     } else {
       const edit = Todos.find((todo) => todo.index.toString() === id);
       if (edit !== undefined) {
