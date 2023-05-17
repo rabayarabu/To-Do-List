@@ -1,7 +1,6 @@
 /* stylelint-disable */
 .pln { color: #000; }
 
-
 @media screen {
   .str { color: #080; }
   .kwd { color: #008; }

@@ -29,9 +29,5 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
     ],
-    coveragePathIgnorePatterns: [
-      '/node_modules/', // Ignore all files in the 'node_modules' directory
-      '\\.css$', // Ignore CSS files
-    ],
   },
 };
