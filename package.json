@@ -1,10 +1,10 @@
 {
   "name": "to-do-list",
   "version": "1.0.0",
-  "description": "<a name=\"readme-top\"></a>",
+  "description": "This is a very useful tool to maintain our daily activity",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -22,6 +22,7 @@
     "webpack-dev-server": "^4.15.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
