@@ -14,7 +14,7 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-  - [👥 Author Rabaya Rabu ](#-author-rabaya-rabu-)
+  - [👥 Author Rabaya Rabu and Emanuel Tofa ](#-author-rabaya-rabu-and-emanuel-tofa-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -101,7 +101,7 @@ To run the project, open the html file
 
 <!-- AUTHORS -->
 
-## 👥 Author Rabaya Rabu <a name="authors"></a>
+## 👥 Author Rabaya Rabu and Emanuel Tofa <a name="authors"></a>
 
 
 👤 **Rabaya Rabu**
@@ -110,7 +110,7 @@ To run the project, open the html file
 - Twitter: [@rabaya_rabu](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/rabaya-rabu-142721169/)
 
-👤 **Author1**
+👤 **Emanuel Tofa**
 
 - GitHub: [@uno36](https://github.com/uno36)
 - Twitter: [@tofauemmanuel](https://twitter.com/tofauemmanuel)
